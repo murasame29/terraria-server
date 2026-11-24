@@ -12,7 +12,7 @@ RUN favorites_path="/root/My Games/Terraria" && mkdir -p "$favorites_path" && ec
 
 RUN mkdir /tmp/terraria && \
     cd /tmp/terraria && \
-    curl -sL https://www.terraria.org/api/download/pc-dedicated-server/terraria-server-1412.zip --output terraria-server.zip && \
+    curl -sL https://www.terraria.org/api/download/pc-dedicated-server/terraria-server-146.zip --output terraria-server.zip && \
     unzip -q terraria-server.zip && \
     mv */Linux /vanilla && \
     mv */Windows/serverconfig.txt /vanilla/serverconfig-default.txt && \
@@ -25,10 +25,10 @@ COPY run-vanilla.sh /vanilla/run.sh
 # Metadata
 ARG VCS_REF
 LABEL org.opencontainers.image.revision=$VCS_REF
-LABEL org.opencontainers.image.source="https://github.com/beardedio/terraria"
+LABEL org.opencontainers.image.source="https://github.com/murasame29/terraria-server"
 LABEL org.opencontainers.image.licenses="MIT"
-LABEL org.opencontainers.image.description="Vanilla Terraria Server - Version 1412"
-LABEL VANILLA_VERSION=1412
+LABEL org.opencontainers.image.description="Vanilla Terraria Server - Version 146"
+LABEL VANILLA_VERSION=146
 
 # Allow for external data
 VOLUME ["/config"]

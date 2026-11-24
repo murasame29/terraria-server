@@ -16,7 +16,7 @@ import sys, os, glob, datetime, urllib
 repo = "terraria"
 
 # Repository Slug
-slug = "beardedio/terraria"
+slug = os.environ.get("GITHUB_REPOSITORY", "murasame29/terraria-server")
 
 # The folder that is tagged "latest"
 latest_folder = "vanilla"
